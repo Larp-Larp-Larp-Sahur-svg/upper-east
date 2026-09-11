@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+.gitignore
+*.md
+.env*
+upper-east-construction-finishing.zip
+assets
+tsconfig.tsbuildinfo

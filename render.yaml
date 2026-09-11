@@ -1,0 +1,19 @@
+# Render blueprint: connect your GitHub repo, then apply this blueprint.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: upper-east
+    runtime: docker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CMS_CONTENT_DIR
+        value: /data/content
+      - key: CMS_PASSWORD
+        sync: false
+    disk:
+      name: upper-east-content
+      mountPath: /data/content
+      sizeGB: 1
